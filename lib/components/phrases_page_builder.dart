@@ -9,7 +9,7 @@ class PhrasePageBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      color: Colors.lightBlueAccent,
+      color: Color(0XFF6FCF97),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -21,11 +21,17 @@ class PhrasePageBuilder extends StatelessWidget {
                 Text(
                   phrase.jp_name,
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 17,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
                   phrase.en_name,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ],
             ),
@@ -37,6 +43,8 @@ class PhrasePageBuilder extends StatelessWidget {
             },
             icon: const Icon(Icons.play_arrow),
             alignment: Alignment.centerRight,
+            color: Colors.white,
+
           )
         ],
       ),

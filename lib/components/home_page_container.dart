@@ -1,27 +1,33 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../modules/home_page_container_class.dart';
-
-class home_page_container extends StatelessWidget {
-   home_page_container({super.key, required this.item});
-   Home_page_container_items item;
+class HomePageContainer extends StatelessWidget {
+  const HomePageContainer(
+      {super.key,
+      required this.onTap,
+      required this.color,
+      required this.categoryName});
+  final Function() onTap;
+  final Color color;
+  final String categoryName;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 8.0),
-      child: GestureDetector(
-        onTap: item.onTap,
+    return GestureDetector(
+      onTap: onTap,
+      child: Card(
+        elevation: 10,
         child: Container(
-          height: 70,
-          color: item.color,
-          width: double.infinity,
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 20, 5, 0),
+          decoration: BoxDecoration(
+              color: color, borderRadius: BorderRadius.circular(10)),
+          child: Center(
             child: Text(
-              item.category_name,
-              style: const TextStyle(fontSize: 20),
+              categoryName,
+              style: const TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.bold
+              ),
             ),
           ),
         ),

@@ -8,13 +8,13 @@ class FamilyMembersPageBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.pink[300],
+      color: Color(0XFFFF9F80),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
+            color: Color(0XFFFAF3E0),
             child: Image.asset(family_member.image_path),
-            color: Colors.white,
           ),
           Column(
             children: [
@@ -22,9 +22,17 @@ class FamilyMembersPageBuilder extends StatelessWidget {
                 family_member.jp_name,
                 style: TextStyle(
                   fontSize: 30,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(family_member.en_name),
+              Text(
+                family_member.en_name,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
           IconButton(
@@ -34,6 +42,8 @@ class FamilyMembersPageBuilder extends StatelessWidget {
             },
             icon: const Icon(Icons.play_arrow),
             alignment: Alignment.centerRight,
+            color: Colors.white,
+
           )
         ],
       ),

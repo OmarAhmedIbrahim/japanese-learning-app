@@ -9,13 +9,13 @@ class NumbersPageBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.greenAccent,
+      color: Color(0XFF4A90E2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
+            color:Color(0XFFFAF3E0),
             child: Image.asset(number.image_path),
-            color: Colors.white,
           ),
           Column(
             children: [
@@ -23,9 +23,17 @@ class NumbersPageBuilder extends StatelessWidget {
                 number.jp_name,
                 style: TextStyle(
                   fontSize: 30,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(number.en_name),
+              Text(
+                number.en_name,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
           IconButton(
@@ -35,6 +43,7 @@ class NumbersPageBuilder extends StatelessWidget {
             },
             icon: const Icon(Icons.play_arrow),
             alignment: Alignment.centerRight,
+            color: Colors.white,
           )
         ],
       ),

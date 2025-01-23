@@ -3,11 +3,11 @@ import 'package:language_learning/screens/home_screen.dart';
 
 
 void main() {
-  runApp(const Language_learning_app());
+  runApp(const LanguageLearningApp());
 }
 
-class Language_learning_app extends StatelessWidget {
-  const Language_learning_app({super.key});
+class LanguageLearningApp extends StatelessWidget {
+  const LanguageLearningApp({super.key});
 
   @override
   Widget build(BuildContext context) {
